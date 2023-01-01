@@ -14,7 +14,6 @@ class Calculator
     void divide();
     void square();
     void sqrts();
-    void solveEquation();
     void setMem();
     void printMem();
     void welcome();
@@ -86,32 +85,6 @@ void Calculator::welcome()
 {
     cout << "\n\nEnter an operation (+, -, /, *, sqrt, square, change, setmem, printmem) or exit\n";
 }
-
-void Calculator::solveEquation()
-{
-    cout << "Enter the coefficient of the variable: ";
-    cin >> a;
-    cout << "Enter the constant term: ";
-    cin >> b;
-    cout<<"Your equation is : "<<a<<"x + "<<b<< endl;
-
-    if (a == 0)
-    {
-        if (b == 0)
-        {
-            cout << "The equation has infinitely many solutions." << endl;
-        }
-        else
-        {
-            cout << "The equation has no solutions." << endl;
-        }
-    }
-    else
-    {
-        cout << "The solution is: " << (-b) / a << endl;
-    }
-}
-
 /// parse input and decide which member func to call
 void Calculator::Operation(const string& input)
 {
@@ -147,17 +120,4 @@ void Calculator::Operation(const string& input)
     {
         printMem();
     }
-    if else (input == "soleqn")
-    {
-        c.solveEquation();
-    }
-}
-
-int main(){
-    Calculator c;
-    string input;
-    cout<<"this is our calculator"<< endl;
-    cout<<"+ - % * sqrt square setmem printmem soleqn"<<endl;
-    cin>>input;
-    c.Operation(input);
 }
