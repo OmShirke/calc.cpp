@@ -147,20 +147,17 @@ void Calculator::Operation(const string& input)
     {
         printMem();
     }
+    if else (input == "soleqn")
+    {
+        c.solveEquation();
+    }
 }
 
 int main(){
     Calculator c;
     string input;
-    cout<<"this is our calculator";
+    cout<<"this is our calculator"<< endl;
+    cout<<"+ - % * sqrt square setmem printmem soleqn"<<endl;
     cin>>input;
-    
-    if (input == "soleqn")
-    {
-        c.solveEquation();
-    }else{
-        c.Operation(input);
-    }
-    
-    
+    c.Operation(input);
 }
