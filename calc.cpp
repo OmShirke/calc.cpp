@@ -151,5 +151,16 @@ void Calculator::Operation(const string& input)
 
 int main(){
     Calculator c;
-    c.solveEquation();
+    string input;
+    cout<<"this is our calculator";
+    cin>>input;
+    
+    if (input == "soleqn")
+    {
+        c.solveEquation();
+    }else{
+        c.Operation(input);
+    }
+    
+    
 }
