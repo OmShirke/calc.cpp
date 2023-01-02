@@ -6,6 +6,7 @@ class Calculator
     private:
     int result,mem;
     int a,b;
+    string input;
 
     public:
     void add();
@@ -144,8 +145,9 @@ void Calculator::printMem()
 void Calculator::welcome() 
 {   
     cout << "\n\nEnter one of:\n"
-    << "+, -, /, *, sqrt, square, change, setmem, printmem, sin, cos, log, tan, ln, abs, pow\n"
+    << "add, sub, divide, multiply, sqrt, square, setmem, printmem, sin, cos, log, tan, ln, abs, pow\n"
     << "or exit\n";
+    
 }
 void Calculator::Operation(const string& input)
 {
@@ -215,6 +217,7 @@ int main()
     string input;
     Calculator c;
     c.welcome();
+    cin>>input;
     c.Operation(input);
     return 0;
 }
