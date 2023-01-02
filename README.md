@@ -1,2 +1,2 @@
-# calc.cpp
-digital calculator project
+# calculator.cpp
+basic calculator project.
